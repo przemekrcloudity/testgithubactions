@@ -3,8 +3,8 @@ on:
   label:
     types: [created, edited]
 jobs:
-  deploy-to-testing:
-    if: github.event.label.name == 'for-uat'
+  deploy-to-testing2:
+    # if: github.event.label.name == 'for-uat'
     runs-on: ubuntu-latest
     environment: testing2
     steps:
