@@ -1,0 +1,16 @@
+name: validate pull request
+on: [pull-request]
+jobs:
+  eslint-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo validaing with eslint...
+      - run: done
+  prettier-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo validaing with prettier...
+      - run: done
+ 
