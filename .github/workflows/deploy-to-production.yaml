@@ -1,0 +1,11 @@
+name: deploy to testing2
+on:
+  release:
+    types: [released]
+jobs:
+  deploy-to-production:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      # - uses: actions/checkout@v2
+      - run: echo deployment to  production
