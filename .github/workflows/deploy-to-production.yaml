@@ -1,11 +1,14 @@
 name: deploy to production
 on:
   release:
-    types: [released]
+    types: [published]
 jobs:
   deploy-to-production:
     runs-on: ubuntu-latest
     environment: production
     steps:
       # - uses: actions/checkout@v2
+      env:
+        GITHUB_CONTEXT: ${{ toJSON(github) }}
+      - run: echo "$GITHUB_CONTEXT"
       - run: echo deployment to  production
