@@ -1,20 +1,11 @@
-name: deploy to testing2 or prod
+name: deploy to testing2
 on:
-  label:
-    types: [created, edited]
+  release:
+    types: [prereleased]
 jobs:
   deploy-to-testing2:
-    # if: github.event.label.name == 'for-uat'
     runs-on: ubuntu-latest
     environment: testing2
     steps:
       # - uses: actions/checkout@v2
       - run: echo deployment to testing2
-  deploy-to-production:
-    if: contains( toJson(github), 'release' )
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - run: we are on prod! 
-    
-       
