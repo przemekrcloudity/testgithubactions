@@ -1,4 +1,4 @@
-name: deploy to testing
+name: deploy to testing2 or prod
 on:
   label:
     types: [created, edited]
