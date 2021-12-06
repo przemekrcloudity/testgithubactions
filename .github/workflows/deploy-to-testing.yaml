@@ -9,5 +9,5 @@ jobs:
     environment: testing
     steps:
       - uses: actions/checkout@v2
-      - run: deployment to testing
+      - run: echo deployment to testing
        
