@@ -6,13 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo validaing with eslint...
-      - run: done
+      - run: echo done
   prettier-validation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: echo validaing with prettier...
-      - run: done
+      - run: echo done
   test-deployment:
     needs: [eslint-validation, prettier-validation]
     environment: testing

@@ -1,0 +1,13 @@
+name: deploy to testing
+on:
+  push:
+    branches:
+      - master  
+jobs:
+  deploy-to-testing:
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo deployment to testing
+       
