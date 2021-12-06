@@ -1,7 +1,8 @@
-name: deploy to testing
+# name: deploy to testing
 on:
   push:
-    - master  
+    branches:
+      - master  
 jobs:
   deploy-to-testing:
     runs-on: ubuntu-latest
