@@ -1,5 +1,7 @@
 name: deploy to testing
-on: [push] 
+on:
+  push:
+    - master  
 jobs:
   deploy-to-testing:
     runs-on: ubuntu-latest
