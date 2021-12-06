@@ -1,0 +1,9 @@
+name: deploy to testing
+on: [push] 
+jobs:
+  deploy-to-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo yes, we deploy to test
+       
