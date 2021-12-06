@@ -1,5 +1,5 @@
 name: validate pull request
-on: [pull-request]
+on: [pull_request]
 jobs:
   eslint-validation:
     runs-on: ubuntu-latest
@@ -13,4 +13,11 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo validaing with prettier...
       - run: done
+  test-deployment:
+    needs: [eslint-validation, prettier-validation]
+    environment: testing
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo test deloyment in progress
+      - run: echo deployment ok
  
