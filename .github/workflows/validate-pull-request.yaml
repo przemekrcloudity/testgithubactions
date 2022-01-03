@@ -20,4 +20,3 @@ jobs:
     steps:
       - run: echo test deloyment in progress
       - run: echo deployment ok
- 

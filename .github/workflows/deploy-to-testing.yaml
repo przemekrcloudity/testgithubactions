@@ -2,7 +2,7 @@ name: deploy to testing
 on:
   push:
     branches:
-      - master  
+      - master
 jobs:
   deploy-to-testing:
     runs-on: ubuntu-latest
@@ -10,4 +10,3 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo deployment to testing
-       
