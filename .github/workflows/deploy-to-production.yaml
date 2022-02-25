@@ -8,6 +8,8 @@ jobs:
     environment: production
     steps:
       - name: dadsad
-        run: echo dasda
+        env:
+          test: 		${{ secrets.TESTSTR}}
+        run: echo $test
       - name: ddddddddd
         run: echo  ${{ secrets.TESTSTR}}
