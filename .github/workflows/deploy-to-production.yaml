@@ -1,13 +1,13 @@
 name: deploy to production
 on:
-  release:
-    types: [published, edited]
+  push: 
+    branches: master
 jobs:
   deploy-to-production:
     runs-on: ubuntu-latest
     environment: production
-    steps:
-      - env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - run: echo deployment to  production
+		steps:
+			- name: dadsad
+			  run: echo dasda
+			- name: ddddddddd
+			  run: echo  ${{ secrets.TESTSTR}}
