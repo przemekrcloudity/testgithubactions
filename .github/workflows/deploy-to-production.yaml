@@ -1,13 +1,13 @@
 name: deploy to production
 on:
-  push: 
+  push:
     branches: master
 jobs:
   deploy-to-production:
     runs-on: ubuntu-latest
     environment: production
-		steps:
-			- name: dadsad
-			  run: echo dasda
-			- name: ddddddddd
-			  run: echo  ${{ secrets.TESTSTR}}
+    steps:
+      - name: dadsad
+        run: echo dasda
+      - name: ddddddddd
+        run: echo  ${{ secrets.TESTSTR}}
