@@ -2,6 +2,8 @@ name: deploy to production
 on:
   push:
     branches: master
+  workflow_dispatch:
+    
 jobs:
   deploy-to-production:
     runs-on: ubuntu-latest
@@ -13,3 +15,11 @@ jobs:
         run: echo $test
       - name: ddddddddd
         run: echo  ${{ secrets.TESTSTR}}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+          cache: node
+      - name: Install sfdx
+        run: npm i -g sfdx-cli
+      - name: ddddddddd
+        run: echo "dasa done"
