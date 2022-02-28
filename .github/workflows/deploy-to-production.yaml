@@ -20,6 +20,6 @@ jobs:
           node-version: "14.x"
           cache: 'npm'
       - name: Install sfdx
-        run: npm i -g sfdx-cli
-      - name: ddddddddd
-        run: echo "dasa done"
+        run: npm ci  
+      - name: version plugin
+        run: npx sfdx plugins --help
