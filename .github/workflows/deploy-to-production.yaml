@@ -32,6 +32,6 @@ jobs:
       - name: install scanner 
         run: echo y | npx sfdx plugins:install @salesforce/sfdx-scanner
       - name: find 
-        run:  find / -type d -name sfdx-metadata-utils 2>/dev/null 
+        run:  ls ~/.local/share/sfdx/node_modules  # find / -type d -name sfdx-metadata-utils 2>/dev/null 
 
       
