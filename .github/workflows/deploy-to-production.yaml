@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: ls
+        run: ls -la
+      - name: pwd
+        run: pwd
       - name: dadsad
         env:
           test: 		${{ secrets.TESTSTR}}
