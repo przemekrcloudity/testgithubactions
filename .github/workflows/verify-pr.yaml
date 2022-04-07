@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: test 
-        run: echo version 1 
+        run: echo version 2 
       - name: pwd
       
