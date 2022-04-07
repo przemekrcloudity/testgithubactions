@@ -34,6 +34,7 @@ jobs:
       - name: find 
         run:  ls ~/.local/share/sfdx/node_modules  # find / -type d -name sfdx-metadata-utils 2>/dev/null 
       - name: List sf deps
-        run:  ls ~/.local/share/sfdx/node_modules/@salesforce   
+        run:  ls ~/.local/share/sfdx/node_modules/@salesforce 
+      - run:   
 
       
