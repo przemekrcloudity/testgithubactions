@@ -17,7 +17,8 @@ jobs:
       - name: dadsad
         env:
           test: 		${{ secrets.TESTSTR}}
-        run: echo $test
+          CIADSA: $GITHUB_STEP_SUMMARY
+        run: echo $test aaa $CIADSA
       - name: ddddddddd
         run: echo  ${{ secrets.TESTSTR}}
       - uses: actions/setup-node@v2
