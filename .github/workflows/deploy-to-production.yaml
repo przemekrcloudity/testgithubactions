@@ -17,7 +17,7 @@ jobs:
       - name: dadsad
         env:
           test: 		${{ secrets.TESTSTR}}
-          CIADSA: $GITHUB_STEP_SUMMARY
+          CIADSA: ${{ GITHUB_STEP_SUMMARY }}
         run: echo $test aaa $CIADSA
       - name: ddddddddd
         run: echo  ${{ secrets.TESTSTR}}
