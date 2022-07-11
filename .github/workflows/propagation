@@ -1,0 +1,10 @@
+name: Test env propagation
+on: workflow_call
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Install dependencies
+        env:
+          TEST: ${{ secrets.TESTT }}
+        run: echo $TEST
