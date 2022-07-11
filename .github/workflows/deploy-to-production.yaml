@@ -10,30 +10,5 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v2
-      - name: ls
-        run: ls -la
-      - name: pwd
-        run: pwd
-      - name: dadsad
-        env:
-          test: 		${{ secrets.TESTSTR}}
-          CIADSA: ${{ env.GITHUB_STEP_SUMMARY }}
-        run: echo $test aaa $GITHUB_STEP_SUMMARY aaadasda $CIADSA
-      - name: ddddddddd
-        run: echo  ${{ secrets.TESTSTR}}
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "14.x"
-          cache: 'npm'
-          cache-dependency-path: package-lock.json
-      - name: Install sfdx
-        run: npm ci  
-      - name: version plugin
-        run: npx sfdx plugins --help
-      - name: install scanner 
-        run: echo y | npx sfdx plugins:install @salesforce/sfdx-scanner
-      - name: find 
-        run:  ls ~/.local/share/sfdx/node_modules  # find / -type d -name sfdx-metadata-utils 2>/dev/null 
-      - name: List sf deps
-        run:  ls ~/.local/share/sfdx/node_modules/@salesforce 
-    
+      - name: zs
+        uses: ./github/workflows/propagation.yml
