@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
  
       - name: zs
-        uses: ./.github/workflows/propagation.yaml
+        uses: przemekrcloudity/testgithubactions/.github/workflows/propagation.yaml@main
